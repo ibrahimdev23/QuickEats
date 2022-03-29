@@ -24,7 +24,7 @@ const client = yelp.client(API_YELP_KEY);
 
 //get request renders the home page using ejs  
 app.get('/', function(req, res) { 
-    res.sendFile(path.join(__dirname, '/public/views'))
+    res.sendFile(path.join(__dirname, '/public/views/home'))
     res.render('home')
     
   })
