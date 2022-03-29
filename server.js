@@ -12,7 +12,7 @@ const yelp = require('yelp-fusion');
 const app = express();
 
 
-const API_YELP_KEY = process.env.API_YELP_KEY
+const API_KEY = process.env.API_KEY
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false }) 
 
@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, '/public/views'))
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public/css'))
 
-const client = yelp.client(API_YELP_KEY);
+const client = yelp.client(API_KEY);
 
 //get request renders the home page using ejs  
 app.get('/', function(req, res) { 
