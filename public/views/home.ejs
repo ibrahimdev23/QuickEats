@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+
+<head> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville:wght@400;700&family=Merriweather:wght@300;400&family=Noto+Serif:wght@400;700&family=Oxygen:wght@400;700&family=Palette+Mosaic&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/hamburger_1f354.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+       
+	<title> Quick Eats  </title>
+</head>
+
+<div class ="content">
+    
+        <div>
+            <h1 id="title"> Quick Eats </h1>
+        </div>
+    
+    <div class="quote">
+	<q>Food may not be the answer to world peace, but it’s a start.</q><cite>Anthony Bourdain</cite> 
+    </div>
+
+	<h2>😋 🍕 🍳  🍔  🥘  🥡 🍜</h2>		
+
+    <form id = "search" method = "POST" action="/results"> 	
+		<div class="searchCont">
+
+		<div class="bar">
+			<input  type= "text" name = "location" placeholder = "location" value="New York City,NY">
+			<button class="submitBtn" type="submit" value="submit"> <i class="fa fa-search"> </i> </input>
+            </button>
+
+		</div>		
+            <br>
+	</div>
+    <section class="options">
+
+        <div class="holder">
+        <div >
+    <h4> <div id="moreBtn"> 🔥 </div>      </h4>	 	 
+        
+        </div>
+    <div class="categories" >
+        <label> <input name="categories" type="checkbox" value="halal"> Halal</label>
+        <label> <input name="categories" type="checkbox" value="chinese"> Chinese</label>
+        <label> <input name="categories" type="checkbox" value="mexican"> Mexican</label>
+
+        <label> <input name="categories" type="checkbox" value="american"> American</label>
+        <label> <input name="categories" type="checkbox" value="vegan"> Vegan</label>
+        <label> <input name="categories" type="checkbox" value="cafes"> Cafes</label>
+</div>
+<div class="more-options hidden">
+        <label> <input name="categories" type="checkbox" value="ethiopian"> Ethiopian</label>
+        <label> <input name="categories" type="checkbox" value="french"> French</label> 
+         <label> <input name="categories" type="checkbox" value="italian"> Italian</label>
+        <label> <input name="categories" type="checkbox" value="japanese"> Japanese</label>
+        <label> <input name="categories" type="checkbox" value="korean"> Korean</label>
+        <label> <input name="categories" type="checkbox" value="pizza"> Pizza</label>
+    
+    </div>
+    
+    <div class="more-options hidden">
+        <label> <input name="categories" type="checkbox" value="sushi"> Sushi</label>
+        <label> <input name="categories" type="checkbox" value="international"> International</label> 
+         <label> <input name="categories" type="checkbox" value="delis"> Delis</label>
+        <label> <input name="categories" type="checkbox" value="sandwiches"> Sandwiches</label>
+        <label> <input name="categories" type="checkbox" value="fish & chips "> Fish & Chips</label>
+      
+    
+    </div>
+    <div class="more-options hidden">
+        <label> <input name="categories" type="checkbox" value="comfort food"> Comfort Food</label>
+        <label> <input name="categories" type="checkbox" value="fast food"> Fast Food</label> 
+         <label> <input name="categories" type="checkbox" value="british"> British</label>
+        <label> <input name="categories" type="checkbox" value="buffets"> Buffets</label>
+        <label> <input name="categories" type="checkbox" value="asian fusion"> Asian Fusion</label>
+       
+    
+    </div>
+
+
+    
+
+</div>
+
+    </div>
+</div>	
+    </section>
+    </form>
+
+
+</div>
+<br>
+
+
+<script>
+	
+
+	let options = document.querySelectorAll('.more-options')
+	let optionsBtn = document.querySelector('#moreBtn')
+
+
+const displayMoreOptions = () => {
+		options.forEach((item) => {
+			item.classList.toggle('hidden')
+		})
+}
+
+moreBtn.addEventListener('click', displayMoreOptions)
+
+
+</script>
+
+</html>
