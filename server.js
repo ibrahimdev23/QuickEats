@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/public/css'))
 const client = yelp.client(API_YELP_KEY);
 
 //get request renders the home page using ejs  
-app.get('https://quickeats-app.herokuapp.com/', function(req, res) { 
+app.get('/', function(req, res) { 
     res.render('home')
     
   })
