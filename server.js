@@ -5,7 +5,7 @@
 const express = require ('express'); //use express
 const path = require('path')
 
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') }   )
+require('dotenv').config()
 
 const bodyParser = require('body-parser');
 const yelp = require('yelp-fusion');
@@ -16,9 +16,9 @@ const API_YELP_KEY = process.env.API_YELP_KEY
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false }) 
 
-app.set('views', path.join(__dirname, '../public/views'))
+app.set('views', path.join(__dirname, '/public/views'))
 app.set('view engine', 'ejs')
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(__dirname + '/public/css'))
 
 const client = yelp.client(API_YELP_KEY);
 
@@ -63,7 +63,7 @@ app.get('/', function(req, res) {
 });
 
 
-const port = process.env.port || 4400
+const port = process.env.PORT || 4400
 
 app.listen(port, () => {
     console.log(`server running on ${port}`)
