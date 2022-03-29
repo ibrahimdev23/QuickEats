@@ -1,1 +1,1 @@
-web:npm startP
+web:npm start
