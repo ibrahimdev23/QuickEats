@@ -12,7 +12,7 @@ const yelp = require('yelp-fusion');
 const app = express();
 
 
-const API_YELP_KEY = '-Wvz-0nXoup41feX-6BFM73oVwIzoYC4ZXmt8Bg9SicAV0PR00ki1dBIs2cuiyyQi6wt34Am7F8t-RYE3vlWkhxRMiAsOKray2Yy20VpBIPF4COrFulhA5uMsMU4YnYx'
+const API_YELP_KEY = process.env.API_YELP_KEY
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false }) 
 
